@@ -28,9 +28,6 @@ This research project focuses on developing smooth motion control algorithms for
 
 
 
-
-
-
 ## Hardware Platform
 - Arduino
 - Motor Driver
@@ -42,3 +39,13 @@ This research project focuses on developing smooth motion control algorithms for
   
 ## Contributors
 - Minh Tuan
+
+## Challenges & Solutions (Rắc rối & Cách giải quyết)
+
+### 1. Motor Startup Failure at Low PWM Duty Cycle
+   **Problem:** 
+    During the initial testing phase, when attempting to step the motor speed through `0% -> 25% -> 50% -> 75% -> 100%`, the motor failed to rotate at the `25%` threshold. This halted the entire initial motion sequence.
+   **Root Cause:** 
+    A 25% PWM duty cycle was too low to generate enough voltage and electromagnetic torque to overcome the system's initial static friction (holding torque/friction).
+*   **Solution:** 
+    Calibrated the minimum threshold required to initiate motion. Adjusted the speed test intervals to `31% -> 51% -> 75% -> 100%`. The updated 31% starting PWM provided sufficient power to break static friction, allowing the motor to start smoothly and execute the profile successfully.
