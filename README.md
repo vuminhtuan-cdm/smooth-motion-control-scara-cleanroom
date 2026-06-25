@@ -1,2 +1,32 @@
-# smooth-motion-control-scara-cleanroom
-Smooth Motion Control for SCARA Robots in Clean Rooms: Development and evaluation of trapezoidal and S-curve trajectory planning algorithms for precise wafer handling applications.
+# Smooth Motion Control for SCARA Robots in Clean Rooms
+
+## Project Overview
+This research project focuses on developing smooth motion control algorithms for SCARA robots operating in semiconductor cleanroom environments.
+
+## Research Objectives
+- Develop smooth motion control strategies
+- Implement trapezoidal velocity profiles
+- Implement S-curve trajectory planning
+- Evaluate motion performance
+- Improve wafer handling precision
+
+## Current Progress
+- [X] Basic motor control
+- [X] PWM speed control
+- [X] Trapezoidal profile
+- [X] S-curve profile
+- [X] Motion performance evaluation
+- [ ] SCARA integration
+- [ ] Wafer handling validation
+
+## Hardware Platform
+- Arduino
+- Motor Driver
+- Motor System
+  
+## Software
+- MATLAB
+- Arduino IDE
+  
+## Contributors
+- Minh Tuan
