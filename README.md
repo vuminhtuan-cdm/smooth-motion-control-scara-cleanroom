@@ -16,15 +16,18 @@ This research project focuses on developing smooth motion control algorithms for
 - [X] Trapezoidal profile
 - [X] S-curve profile
 - [X] Motion performance evaluation
+- [X] PWM MATLAB Simulation
 - [ ] SCARA integration
 - [ ] Wafer handling validation
 
 ## Experimental Results & Demos
 
 ### 1. Standard PWM Control (Without Profile)
-> *Observation: Motor vibrates and shakes at startup due to sudden acceleration.*
+ *Observation: Motor vibrates and shakes at startup due to sudden acceleration.*
   [https://github.com/user-attachments/assets/664ecdd9-f9eb-41cd-8849-d0fbb2d9c368]
 
+### 2. PWM MATLAB Simulation
+ *(Click here to watch the PWM mATLAB Simulation video) [https://drive.google.com/file/d/1Z3RJUlsAmSgLiOA2n87hagkEpUWKGIjC/view?usp=sharing]
 
 
 
