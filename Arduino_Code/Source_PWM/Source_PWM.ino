@@ -2,29 +2,44 @@ const int ENA = 9;
 const int IN1 = 8;
 const int IN2 = 7;
 
-void setup() {
-  pinMode(ENA, OUTPUT);
-  pinMode(IN1, OUTPUT);
-  pinMode(IN2, OUTPUT);
+void setup()
+{
+    Serial.begin(115200);
 
-  digitalWrite(IN1, HIGH);
-  digitalWrite(IN2, LOW);
+    pinMode(ENA, OUTPUT);
+    pinMode(IN1, OUTPUT);
+    pinMode(IN2, OUTPUT);
 
-  analogWrite(ENA, 255); // đá khởi động
-  delay(2000);
+    digitalWrite(IN1, HIGH);
+    digitalWrite(IN2, LOW);
+
+    analogWrite(ENA,255);
+    delay(2000);
 }
 
-void loop() {
+void loop()
+{
+    // Tăng tốc
+    for(int pwm = 0; pwm <= 255; pwm += 5)
+    {
+        analogWrite(ENA,pwm);
 
-  analogWrite(ENA, 80);   // ~31%
-delay(5000);
+        Serial.println(pwm);   // Gửi đúng 1 số
 
-analogWrite(ENA, 130);  // ~51%
-delay(5000);
+        delay(50);
+    }
 
-analogWrite(ENA, 190);  // ~75%
-delay(5000);
+    delay(3000);
 
-analogWrite(ENA, 255);  // 100%
-delay(5000);
+    // Giảm tốc
+    for(int pwm = 255; pwm >= 0; pwm -= 5)
+    {
+        analogWrite(ENA,pwm);
+
+        Serial.println(pwm);
+
+        delay(50);
+    }
+
+    delay(1000);
 }

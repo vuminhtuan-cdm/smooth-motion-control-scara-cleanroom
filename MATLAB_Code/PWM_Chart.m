@@ -2,7 +2,7 @@
 clear; clc; close all;
 
 % CẤU HÌNH CỔNG SERIAL
-comPort = 'COM11'; 
+comPort = 'COM12'; 
 baudRate = 115200;
 
 try
